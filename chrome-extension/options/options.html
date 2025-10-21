@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenProject Logger</title>
+    <link rel="stylesheet" href="options.css">
+</head>
+
+<body>
+    <div id="toasterContainer" class="toaster-container" role="region" aria-live="polite" aria-label="Notifications"></div>
+
+    <main class="container">
+        <header class="header">
+            <h1>OpenProject Time Logger</h1>
+            <p class="subtitle">Streamline your work log entries with intelligent automation</p>
+        </header>
+
+        <nav class="stepper-container" role="tablist" aria-label="Progress steps">
+            <ol class="stepper">
+                <li class="step active" data-step="1" role="tab" aria-selected="true" aria-controls="step-1">
+                    <div class="step-number">1</div>
+                    <div class="step-label">Configuration</div>
+                </li>
+                <li class="step pending" data-step="2" role="tab" aria-selected="false" aria-controls="step-2">
+                    <div class="step-number">2</div>
+                    <div class="step-label">Upload Logs</div>
+                </li>
+                <li class="step pending" data-step="3" role="tab" aria-selected="false" aria-controls="step-3">
+                    <div class="step-number">3</div>
+                    <div class="step-label">Process & Review</div>
+                </li>
+                <li class="step pending" data-step="4" role="tab" aria-selected="false" aria-controls="step-4">
+                    <div class="step-number">4</div>
+                    <div class="step-label">Complete</div>
+                </li>
+            </ol>
+        </nav>
+
+        <div class="content">
+            <article class="step-content active" data-step="1" id="step-1" role="tabpanel" aria-labelledby="step-1-tab">
+                <header class="step-header">
+                    <h2 class="step-title">Configure OpenProject Connection</h2>
+                    <p class="step-description">Set up your API credentials - projects will be loaded automatically</p>
+                </header>
+
+                <form id="configForm">
+                    <fieldset class="section">
+                        <legend>🔐 Access Token Configuration</legend>
+                        <div class="form-group">
+                            <label for="accessToken">Access Token *</label>
+                            <input type="password" id="accessToken" name="accessToken" required placeholder="Enter your OpenProject Access Token" aria-describedby="token-help">
+                            <div id="token-help" class="help-text">Get from OpenProject Account Settings → Access Tokens</div>
+                        </div>
+                    </fieldset>
+                </form>
+
+                <footer class="step-actions">
+                    <div></div>
+                    <div class="button-group">
+                        <button type="submit" form="configForm" class="btn-primary" id="saveTestBtn">
+                            Save & Test Connection
+                        </button>
+                    </div>
+                </footer>
+                <div id="saveStatus" class="status hidden" role="status" aria-live="polite"></div>
+            </article>
+
+            <article class="step-content" data-step="2" id="step-2" role="tabpanel" aria-labelledby="step-2-tab">
+                <div class="upload-workspace">
+                    <section class="upload-main-section">
+                        <div class="upload-dropzone-container">
+                            <div id="customDropzone" class="custom-dropzone enhanced" role="button" tabindex="0" aria-label="Upload JSON file by clicking or dragging">
+                                <div class="dropzone-content">
+                                    <div class="upload-icon">📁</div>
+                                    <div class="dropzone-title">Choose Log File</div>
+                                    <div class="dropzone-description">Drag & drop your JSON file here or click to browse</div>
+                                    <div class="dropzone-formats">Supported formats: .json</div>
+                                </div>
+                            </div>
+                            <input type="file" id="logFile" name="logFile" accept=".json" class="hidden-file-input" aria-label="Select JSON log file" />
+                            <span class="file-name hidden" id="fileName" role="status"></span>
+                        </div>
+                    </section>
+
+                    <section class="upload-sidebar-section">
+                        <div class="sample-card-body">
+                            <button type="button" class="btn-projects" id="showProjectsBtn">
+                                📋 Projects
+                            </button>
+                        </div>
+                        <div class="sample-card-body">
+                            <button type="button" class="btn-reconfigure" id="reconfigureApiBtn">
+                                🔑 Reconfigure
+                            </button>
+                        </div>
+                        <div class="sample-card-body">
+                            <button id="downloadSampleBtn" class="btn-sample enhanced">
+                                📄Sample JSON
+                            </button>
+                        </div>
+                    </section>
+                </div>
+
+                <footer class="step-actions">
+                    <button type="button" class="btn-outline" id="prevStep1">← Previous</button>
+                    <div class="button-group">
+                        <button type="button" class="btn-primary" id="nextStep2" disabled>Continue →</button>
+                    </div>
+                </footer>
+            </article>
+
+            <article class="step-content" data-step="3" id="step-3" role="tabpanel" aria-labelledby="step-3-tab">
+                <header class="step-header">
+                    <h2 class="step-title">Review & Process Entries</h2>
+                </header>
+
+                <section id="analysisSection" aria-label="Analysis results">
+                    <div id="analysisSummary"></div>
+                    <div id="analysisDetails"></div>
+
+                    <section class="section hidden" id="commentSection">
+                        <h3>💬 Comments & Statuses for Work Packages</h3>
+                        <div id="commentInputs"></div>
+                    </section>
+                </section>
+
+                <footer class="step-actions">
+                    <button type="button" class="btn-outline" id="prevStep2">← Previous</button>
+                    <div class="button-group">
+                        <button type="button" class="btn-primary" id="processBtn" disabled>🚀 Process All Entries</button>
+                        <button type="button" class="btn-outline" id="resetBtn">🔄 Reset</button>
+                    </div>
+                </footer>
+            </article>
+
+            <article class="step-content" data-step="4" id="step-4" role="tabpanel" aria-labelledby="step-4-tab">
+                <section id="processingSection" class="processing-section">
+                    <header class="step-header">
+                        <h2 class="step-title">⚡ Processing Work Log Entries</h2>
+                        <p class="step-description">Creating work packages and time entries in OpenProject</p>
+                    </header>
+
+                    <div class="section">
+                        <div class="progress-container" role="progressbar" aria-live="polite">
+                            <div class="progress-text" id="progressText">Starting...</div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="progressFill"></div>
+                            </div>
+                            <div class="progress-details" id="progressDetails">0/0</div>
+                        </div>
+
+                        <div class="processing-log" id="processingLog" role="log" aria-live="polite" aria-label="Processing log"></div>
+                    </div>
+                </section>
+
+                <section id="successSection" class="success-content hidden">
+                    <div class="success-stats" id="successStats" role="region" aria-label="Processing results">
+                    </div>
+
+                    <footer class="step-actions">
+                        <div></div>
+                        <div class="button-group">
+                            <button type="button" class="btn-outline" id="processAnotherBtn">📁 Upload Again</button>
+                            <button type="button" class="btn-primary" id="closeBtn">✅ Done & Close Tab</button>
+                        </div>
+                    </footer>
+                </section>
+            </article>
+        </div>
+
+        <div id="commentModal" class="modal hidden" role="dialog" aria-labelledby="commentModalTitle" aria-modal="true">
+            <div class="modal-content">
+                <h3 id="commentModalTitle">Enter comment for work package</h3>
+                <p id="commentModalSubject"></p>
+                <textarea id="commentModalInput" placeholder="Enter comment (or leave blank to skip)" aria-label="Work package comment"></textarea>
+                <div class="modal-buttons">
+                    <button id="commentModalOk" class="btn-primary">OK</button>
+                    <button id="commentModalSkip" class="btn-outline">Skip</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="projectsModal" class="modal hidden" role="dialog" aria-labelledby="projectsModalTitle" aria-modal="true">
+            <div class="modal-content modal-large">
+                <div class="modal-header">
+                    <h3 id="projectsModalTitle">Projects</h3>
+                    <button type="button" class="modal-close" id="projectsModalClose" aria-label="Close projects modal">×</button>
+                </div>
+                <div class="modal-body">
+                    <div id="projectsTableContainer">
+                        <div class="loading-state" id="projectsLoading">
+                            <div class="spinner"></div>
+                            <span>Loading projects...</span>
+                        </div>
+                        <table id="projectsTable" class="projects-table hidden">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Project Name</th>
+                                </tr>
+                            </thead>
+                            <tbody id="projectsTableBody">
+                            </tbody>
+                        </table>
+                        <div id="projectsError" class="error-state hidden">
+                            <span class="error-icon">⚠️</span>
+                            <span class="error-message">Failed to load projects. Please check your access token.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script type="module" src="options.js"></script>
+</body>
+
+</html>

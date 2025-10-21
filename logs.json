@@ -1,0 +1,45 @@
+{
+    "logs": [
+        {
+            "date": "aug-28-2025",
+            "entries": [
+                {
+                    "project": "IDCOL",
+                    "subject": "August Daily Scrum - 50000179",
+                    "break_hours": null,
+                    "duration_hours": 0.5,
+                    "activity": "Meeting",
+                    "is_scrum": true,
+                    "work_package_id": 5641
+                },
+                {
+                    "project": "IDCOL",
+                    "subject": "Enhance candidate onboarding process with additional fields and validations",
+                    "break_hours": 0.25,
+                    "duration_hours": 4,
+                    "activity": "Development",
+                    "is_scrum": false,
+                    "work_package_id": null
+                },
+                {
+                    "project": "IDCOL",
+                    "subject": "Enhance head count entry management with desk selection and improved filtering options",
+                    "break_hours": 0.5,
+                    "duration_hours": 1.75,
+                    "activity": "Development",
+                    "is_scrum": false,
+                    "work_package_id": null
+                },
+                {
+                    "project": "IDCOL",
+                    "subject": "Update validation rules in WebRegisterRequest to enforce maximum length for first and last names",
+                    "break_hours": 0.2,
+                    "duration_hours": 1,
+                    "activity": "Development",
+                    "is_scrum": false,
+                    "work_package_id": null
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,109 @@
+{
+    "logs": [
+        {
+            "date": "oct-9-2025",
+            "entries": [
+                {
+                    "project": "COMMON-SLASH-GENERAL-PURPOSE-AND-MEETINGS-HR-ACTIVITY",
+                    "subject": "Primary Laptop replacement readiness discussion at Shanta Tower",
+                    "break_hours": null,
+                    "duration_hours": 2.5,
+                    "activity": "Meeting",
+                    "is_scrum": false,
+                    "work_package_id": null
+                },
+                {
+                    "project": "IOT-AND-FWA",
+                    "subject": "Bulk channel mapping finalization with stakeholders",
+                    "break_hours": 0.33,
+                    "duration_hours": 4.5,
+                    "activity": "Development",
+                    "is_scrum": false,
+                    "work_package_id": null
+                }
+            ]
+        },
+        {
+            "date": "oct-13-2025",
+            "entries": [
+                {
+                    "project": "IOT-AND-FWA",
+                    "subject": "Bulk Channel Mapping UAT preparation & UAT",
+                    "break_hours": null,
+                    "duration_hours": 2,
+                    "activity": "Testing",
+                    "is_scrum": false,
+                    "work_package_id": null
+                },
+                {
+                    "project": "COMMON-SLASH-RFS-AND-DEMO-SUPPORT",
+                    "subject": "Walton Demo Readiness Support",
+                    "break_hours": 0.5,
+                    "duration_hours": 1.5,
+                    "activity": "Support",
+                    "is_scrum": false,
+                    "work_package_id": null
+                },
+                {
+                    "project": "SEBL",
+                    "subject": "Candidate complaint investigation support",
+                    "break_hours": 0.33,
+                    "duration_hours": 1,
+                    "activity": "Support",
+                    "is_scrum": false,
+                    "work_package_id": null
+                },
+                {
+                    "project": "COMMON-SLASH-GENERAL-PURPOSE-AND-MEETINGS-HR-ACTIVITY",
+                    "subject": "Replaced Primary Laptop collection from Shanta Tower",
+                    "break_hours": 0.33,
+                    "duration_hours": 2,
+                    "activity": "Management",
+                    "is_scrum": false,
+                    "work_package_id": null
+                }
+            ]
+        },
+        {
+            "date": "oct-14-2025",
+            "entries": [
+                {
+                    "project": "COMMON-SLASH-RFS-AND-DEMO-SUPPORT",
+                    "subject": "HRIS Demo",
+                    "break_hours": null,
+                    "duration_hours": 1.33,
+                    "activity": "Support",
+                    "is_scrum": false,
+                    "work_package_id": 2975
+                },
+                {
+                    "project": "COMMON-SLASH-GENERAL-PURPOSE-AND-MEETINGS-HR-ACTIVITY",
+                    "subject": "HR Activity",
+                    "break_hours": 0.5,
+                    "duration_hours": 3,
+                    "activity": "Management",
+                    "is_scrum": false,
+                    "work_package_id": 8845
+                },
+                {
+                    "project": "IDCOL",
+                    "subject": "IDCOL KPI Clarification",
+                    "break_hours": 0.33,
+                    "duration_hours": 2,
+                    "activity": "Meeting",
+                    "is_scrum": false,
+                    "work_package_id": null
+                },
+                {
+                    "project": "IOT-AND-FWA",
+                    "subject": "Bulk channel mapping CR support",
+                    "break_hours": 0.33,
+                    "duration_hours": 1,
+                    "activity": "Support",
+                    "is_scrum": false,
+                    "work_package_id": null
+                }
+            ]
+        }
+    ]
+}
