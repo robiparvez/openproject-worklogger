@@ -1,22 +1,104 @@
 {
     "logs": [
         {
-            "date": "oct-9-2025",
+            "date": "oct-15-2025",
             "entries": [
                 {
-                    "project": "COMMON-SLASH-GENERAL-PURPOSE-AND-MEETINGS-HR-ACTIVITY",
-                    "subject": "Primary Laptop replacement readiness discussion at Shanta Tower",
+                    "project": "IDCOL",
+                    "subject": "KPI clarification meeting with Foysal Vai",
                     "break_hours": null,
-                    "duration_hours": 2.5,
+                    "duration_hours": 2,
                     "activity": "Meeting",
                     "is_scrum": false,
                     "work_package_id": null
                 },
                 {
-                    "project": "IOT-AND-FWA",
-                    "subject": "Bulk channel mapping finalization with stakeholders",
+                    "project": "IDCOL",
+                    "subject": "PF value is not appearing in the appointment letter",
+                    "break_hours": 0.5,
+                    "duration_hours": 2.5,
+                    "activity": "Development",
+                    "is_scrum": false,
+                    "work_package_id": null
+                },
+                {
+                    "project": "IDCOL",
+                    "subject": "The appointment letter and annexure formats need to be reviewed again",
                     "break_hours": 0.33,
-                    "duration_hours": 4.5,
+                    "duration_hours": 2.5,
+                    "activity": "Specification",
+                    "is_scrum": false,
+                    "work_package_id": null
+                }
+            ]
+        },
+        {
+            "date": "oct-16-2025",
+            "entries": [
+                {
+                    "project": "IDCOL",
+                    "subject": "KPI clarification meeting with Foysal Vai",
+                    "break_hours": null,
+                    "duration_hours": 1.5,
+                    "activity": "Meeting",
+                    "is_scrum": false,
+                    "work_package_id": null
+                },
+                {
+                    "project": "IDCOL",
+                    "subject": "Re-arrange the memo date format",
+                    "break_hours": 0.25,
+                    "duration_hours": 1.5,
+                    "activity": "Development",
+                    "is_scrum": false,
+                    "work_package_id": null
+                },
+                {
+                    "project": "IDCOL",
+                    "subject": "Add a bulk cancel option for written tests",
+                    "break_hours": 0.5,
+                    "duration_hours": 2.5,
+                    "activity": "Development",
+                    "is_scrum": false,
+                    "work_package_id": null
+                },
+                {
+                    "project": "COMMON-SLASH-RFS-AND-DEMO-SUPPORT",
+                    "subject": "Walton Demo Server Readiness",
+                    "break_hours": 0.33,
+                    "duration_hours": 2,
+                    "activity": "Support",
+                    "is_scrum": false,
+                    "work_package_id": null
+                }
+            ]
+        },
+        {
+            "date": "oct-19-2025",
+            "entries": [
+                {
+                    "project": "IDCOL",
+                    "subject": "Fixed few issues of bulk generate admit card",
+                    "break_hours": null,
+                    "duration_hours": 2.5,
+                    "activity": "Development",
+                    "is_scrum": false,
+                    "work_package_id": null
+                },
+                {
+                    "project": "IDCOL",
+                    "subject": "The appointment letter and annexure formats need to be reviewed again",
+                    "break_hours": 0.5,
+                    "duration_hours": 2,
+                    "activity": "Specification",
+                    "is_scrum": false,
+                    "work_package_id": null
+                },
+                {
+                    "project": "IDCOL",
+                    "subject": "PF value is not appearing in the appointment letter",
+                    "break_hours": 0.25,
+                    "duration_hours": 1.5,
                     "activity": "Development",
                     "is_scrum": false,
                     "work_package_id": null
@@ -24,20 +106,61 @@
             ]
         },
         {
-            "date": "oct-13-2025",
+            "date": "oct-20-2025",
             "entries": [
                 {
-                    "project": "IOT-AND-FWA",
-                    "subject": "Bulk Channel Mapping UAT preparation & UAT",
+                    "project": "COMMON-SLASH-RFS-AND-DEMO-SUPPORT",
+                    "subject": "Support for Walton Demo Preparation",
                     "break_hours": null,
                     "duration_hours": 2,
-                    "activity": "Testing",
+                    "activity": "Support",
                     "is_scrum": false,
                     "work_package_id": null
                 },
                 {
+                    "project": "IDCOL",
+                    "subject": "Duplicate IDs will not be acceptable; unique ID validation is required",
+                    "break_hours": 0.33,
+                    "duration_hours": 2,
+                    "activity": "Development",
+                    "is_scrum": false,
+                    "work_package_id": null
+                },
+                {
+                    "project": "IDCOL",
+                    "subject": "The mark sheet should be sorted by total marks for ranking",
+                    "break_hours": 0.5,
+                    "duration_hours": 1.5,
+                    "activity": "Development",
+                    "is_scrum": false,
+                    "work_package_id": null
+                },
+                {
+                    "project": "IDCOL",
+                    "subject": "Fixed few issues of interview evaluation sheets",
+                    "break_hours": 0.25,
+                    "duration_hours": 2,
+                    "activity": "Development",
+                    "is_scrum": false,
+                    "work_package_id": null
+                }
+            ]
+        },
+        {
+            "date": "oct-21-2025",
+            "entries": [
+                {
                     "project": "COMMON-SLASH-RFS-AND-DEMO-SUPPORT",
-                    "subject": "Walton Demo Readiness Support",
+                    "subject": "E-recruitment demo for Walton",
+                    "break_hours": null,
+                    "duration_hours": 2,
+                    "activity": "Support",
+                    "is_scrum": false,
+                    "work_package_id": null
+                },
+                {
+                    "project": "SEBL",
+                    "subject": "Support for Export Interview Evaluation Sheet Issue",
                     "break_hours": 0.5,
                     "duration_hours": 1.5,
                     "activity": "Support",
@@ -46,60 +169,28 @@
                 },
                 {
                     "project": "SEBL",
-                    "subject": "Candidate complaint investigation support",
+                    "subject": "Support for SSL certificate renewal",
                     "break_hours": 0.33,
                     "duration_hours": 1,
                     "activity": "Support",
                     "is_scrum": false,
                     "work_package_id": null
-                },
-                {
-                    "project": "COMMON-SLASH-GENERAL-PURPOSE-AND-MEETINGS-HR-ACTIVITY",
-                    "subject": "Replaced Primary Laptop collection from Shanta Tower",
-                    "break_hours": 0.33,
-                    "duration_hours": 2,
-                    "activity": "Management",
-                    "is_scrum": false,
-                    "work_package_id": null
-                }
-            ]
-        },
-        {
-            "date": "oct-14-2025",
-            "entries": [
-                {
-                    "project": "COMMON-SLASH-RFS-AND-DEMO-SUPPORT",
-                    "subject": "HRIS Demo",
-                    "break_hours": null,
-                    "duration_hours": 1.33,
-                    "activity": "Support",
-                    "is_scrum": false,
-                    "work_package_id": 2975
-                },
-                {
-                    "project": "COMMON-SLASH-GENERAL-PURPOSE-AND-MEETINGS-HR-ACTIVITY",
-                    "subject": "HR Activity",
-                    "break_hours": 0.5,
-                    "duration_hours": 3,
-                    "activity": "Management",
-                    "is_scrum": false,
-                    "work_package_id": 8845
                 },
                 {
                     "project": "IDCOL",
-                    "subject": "IDCOL KPI Clarification",
-                    "break_hours": 0.33,
-                    "duration_hours": 2,
-                    "activity": "Meeting",
+                    "subject": "A Google link is required in the admit card",
+                    "break_hours": 0.25,
+                    "duration_hours": 1.5,
+                    "activity": "Development",
                     "is_scrum": false,
                     "work_package_id": null
                 },
                 {
-                    "project": "IOT-AND-FWA",
-                    "subject": "Bulk channel mapping CR support",
-                    "break_hours": 0.33,
-                    "duration_hours": 1,
-                    "activity": "Support",
+                    "project": "IDCOL",
+                    "subject": "The approval flow is not working properly in final recruitment",
+                    "break_hours": 0.5,
+                    "duration_hours": 1.5,
+                    "activity": "Development",
                     "is_scrum": false,
                     "work_package_id": null
                 }
